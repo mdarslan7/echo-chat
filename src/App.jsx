@@ -1,10 +1,9 @@
 import './App.css'
 
 function App() {
-
   return (
     <>
-      <div>Hello World!</div>
+      <div className='text-3xl'>Hello World!</div>
     </>
   )
 }
