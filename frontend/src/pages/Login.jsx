@@ -10,7 +10,7 @@ export default function Login() {
     const loginData = { identifier: email, password };
 
     try {
-      const res = await fetch("http://127.0.0.1:1337/api/auth/local", {
+      const res = await fetch("https://echo-chat-backend.onrender.com/api/auth/local", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loginData),
