@@ -23,9 +23,9 @@ export default function SignUp() {
 
       const data = await res.json();
       if (data.jwt) {
-        localStorage.setItem("jwt", data.jwt); // Store token
+        localStorage.setItem("jwt", data.jwt); 
         alert("Signup successful!");
-        window.location.href = "/chat"; // Redirect to chat
+        window.location.href = "/chat"; 
       } else {
         alert("Signup failed: " + data.error.message);
       }

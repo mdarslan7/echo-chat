@@ -3,6 +3,7 @@ import "./App.css";
 import SignUp from "./pages/SignUp";
 import Login from "./pages/Login";
 import Chat from "./pages/Chat";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/chat" element={<Chat />} />
+        <Route element={<ProtectedRoute />}>
+          <Route path="/chat" element={<Chat />} />
+        </Route>
       </Routes>
     </Router>
   );
